@@ -25,14 +25,17 @@ struct ContentView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
-                Text("$:")
-                TextField("Enter a dollar amount...", text: $currencyString)
-                    .keyboardType(.numberPad)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-            }
+            Text("Inflation Calculator")
+                .frame(maxWidth: .infinity, alignment: .center)
+                .font(.title)
             
             Form {
+                HStack {
+                    Text("$:")
+                    TextField("Enter a dollar amount...", text: $currencyString)
+                        .keyboardType(.numbersAndPunctuation)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                }
                 //TO DO: need to look into date range for inflation data and potentiall adjust
                 DatePicker(selection: $baseDate, in: ...Date(), displayedComponents: .date) {
                     Text("Base Date")
@@ -42,9 +45,26 @@ struct ContentView: View {
                     Text("Target Date")
                 }
             }
-        }.padding()
-        
+            
+            Button(action: calculate) {
+                Text("Calculate")
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(Color.blue)
+                .cornerRadius(10)
+                .foregroundColor(.orange)
+                .font(.title)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.orange, lineWidth: 5)
+                )
+            }
+        }
     }
+}
+
+func calculate() {
+    print("calculating inflation")
 }
 
 struct ContentView_Previews: PreviewProvider {
