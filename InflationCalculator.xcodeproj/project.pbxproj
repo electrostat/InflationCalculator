@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8BCFFD92457730F0064D7AA /* CPIData_1913_2020.csv in Resources */ = {isa = PBXBuildFile; fileRef = A8BCFFD82457730F0064D7AA /* CPIData_1913_2020.csv */; };
 		A8DF3ACA245364CD006D3814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF3AC9245364CD006D3814 /* AppDelegate.swift */; };
 		A8DF3ACC245364CD006D3814 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF3ACB245364CD006D3814 /* SceneDelegate.swift */; };
 		A8DF3ACF245364CD006D3814 /* InflationCalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A8DF3ACD245364CD006D3814 /* InflationCalculator.xcdatamodeld */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A8BCFFD82457730F0064D7AA /* CPIData_1913_2020.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CPIData_1913_2020.csv; sourceTree = "<group>"; };
 		A8DF3AC6245364CD006D3814 /* InflationCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InflationCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DF3AC9245364CD006D3814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8DF3ACB245364CD006D3814 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				A8DF3AE2245364CE006D3814 /* InflationCalculatorTests */,
 				A8DF3AED245364CE006D3814 /* InflationCalculatorUITests */,
 				A8DF3AC7245364CD006D3814 /* Products */,
+				A8BCFFD82457730F0064D7AA /* CPIData_1913_2020.csv */,
 			);
 			sourceTree = "<group>";
 		};
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8DF3AD9245364CE006D3814 /* LaunchScreen.storyboard in Resources */,
+				A8BCFFD92457730F0064D7AA /* CPIData_1913_2020.csv in Resources */,
 				A8DF3AD6245364CE006D3814 /* Preview Assets.xcassets in Resources */,
 				A8DF3AD3245364CE006D3814 /* Assets.xcassets in Resources */,
 			);
