@@ -65,6 +65,7 @@ struct ContentView: View {
 
 func calculate() {
     print("calculating inflation")
+    runTest(csvFileName: "CPIData_1913_2020", csvFileExtension: "csv")
 }
 
 struct ContentView_Previews: PreviewProvider {
