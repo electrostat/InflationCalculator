@@ -68,6 +68,11 @@ func calculate() {
     let inflationData = retrieveInflationData(csvFileName: "CPIData_1913_2020", csvFileExtension: "csv")
     
     print(inflationData)
+    
+    let jan1987 = inflationData["1987"]?["jan"]
+    let mar2020 = inflationData["2020"]?["mar"]
+    
+    calculateInflationRate(cpi1: jan1987 ?? 0.0, cpi2: mar2020 ?? 0.0)
 }
 
 struct ContentView_Previews: PreviewProvider {
