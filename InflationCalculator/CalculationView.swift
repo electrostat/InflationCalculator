@@ -65,6 +65,9 @@ struct ContentView: View {
 
 func calculate() {
     print("calculating inflation")
+    let inflationData = retrieveInflationData(csvFileName: "CPIData_1913_2020", csvFileExtension: "csv")
+    
+    print(inflationData)
 }
 
 struct ContentView_Previews: PreviewProvider {
