@@ -73,6 +73,9 @@ func calculate() {
     let mar2020 = inflationData["2020"]?["mar"]
     
     calculateInflationRate(cpi1: jan1987 ?? 0.0, cpi2: mar2020 ?? 0.0)
+    
+    let newPrice = calcPrice(startingPrice: 100.00, startCPI: jan1987 ?? 0.0, endCPI: mar2020 ?? 0.0)
+    print(String(format: "$%.2f", newPrice))
 }
 
 struct ContentView_Previews: PreviewProvider {
