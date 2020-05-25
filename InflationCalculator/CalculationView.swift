@@ -46,7 +46,9 @@ struct ContentView: View {
                 }
             }
             
-            Button(action: calculate) {
+            Button(action: {
+                calculate(currencyString: self.currencyString, startDate: self.baseDate, targetDate: self.targetDate)
+            }) {
                 Text("Calculate")
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
@@ -63,19 +65,32 @@ struct ContentView: View {
     }
 }
 
-func calculate() {
+func calculate(currencyString: String, startDate: Date, targetDate: Date) {
     print("calculating inflation")
+    
+    let currency = Double(currencyString)
+    
     let inflationData = retrieveInflationData(csvFileName: "CPIData_1913_2020", csvFileExtension: "csv")
     
-    print(inflationData)
+    let yearFormatter = DateFormatter()
+    yearFormatter.dateFormat = "yyyy"
+    let monthFormatter = DateFormatter()
+    monthFormatter.dateFormat = "LLL"
     
-    let jan1987 = inflationData["1987"]?["jan"]
-    let mar2020 = inflationData["2020"]?["mar"]
+    let startYear = yearFormatter.string(from: startDate)
+    let startMonth = monthFormatter.string(from: startDate).lowercased()
+    let endYear = yearFormatter.string(from: targetDate)
+    let endMonth = monthFormatter.string(from: targetDate).lowercased()
     
-    calculateInflationRate(cpi1: jan1987 ?? 0.0, cpi2: mar2020 ?? 0.0)
     
-    let newPrice = calcPrice(startingPrice: 100.00, startCPI: jan1987 ?? 0.0, endCPI: mar2020 ?? 0.0)
+    let startCPI = inflationData[startYear]?[startMonth]
+    let endCPI = inflationData[endYear]?[endMonth]
+    
+    let rate = calculateInflationRate(cpi1: startCPI ?? 0.0, cpi2: endCPI ?? 0.0)
+    
+    let newPrice = calcPrice(startingPrice: currency!, startCPI: startCPI ?? 0.0, endCPI: endCPI ?? 0.0)
     print(String(format: "$%.2f", newPrice))
+    print(String(format: "Inflation Rate: %", rate))
 }
 
 struct ContentView_Previews: PreviewProvider {
