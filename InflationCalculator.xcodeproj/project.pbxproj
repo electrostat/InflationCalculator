@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A8ABA384247AF777005A4AB3 /* CalculateCPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ABA383247AF777005A4AB3 /* CalculateCPI.swift */; };
+		A8ABA386247C1AD8005A4AB3 /* PriceSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ABA385247C1AD8005A4AB3 /* PriceSheet.swift */; };
 		A8B1DB592479AE950014D4BE /* ReadCsv.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1DB582479AE950014D4BE /* ReadCsv.swift */; };
 		A8BCFFD92457730F0064D7AA /* CPIData_1913_2020.csv in Resources */ = {isa = PBXBuildFile; fileRef = A8BCFFD82457730F0064D7AA /* CPIData_1913_2020.csv */; };
 		A8DF3ACA245364CD006D3814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF3AC9245364CD006D3814 /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		A8ABA383247AF777005A4AB3 /* CalculateCPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateCPI.swift; sourceTree = "<group>"; };
+		A8ABA385247C1AD8005A4AB3 /* PriceSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceSheet.swift; sourceTree = "<group>"; };
 		A8B1DB582479AE950014D4BE /* ReadCsv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadCsv.swift; sourceTree = "<group>"; };
 		A8BCFFD82457730F0064D7AA /* CPIData_1913_2020.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CPIData_1913_2020.csv; sourceTree = "<group>"; };
 		A8DF3AC6245364CD006D3814 /* InflationCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InflationCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 				A8DF3AC9245364CD006D3814 /* AppDelegate.swift */,
 				A8DF3ACB245364CD006D3814 /* SceneDelegate.swift */,
 				A8DF3AD0245364CD006D3814 /* CalculationView.swift */,
+				A8ABA385247C1AD8005A4AB3 /* PriceSheet.swift */,
 				A8ABA383247AF777005A4AB3 /* CalculateCPI.swift */,
 				A8B1DB582479AE950014D4BE /* ReadCsv.swift */,
 				A8DF3AD2245364CE006D3814 /* Assets.xcassets */,
@@ -286,6 +289,7 @@
 				A8ABA384247AF777005A4AB3 /* CalculateCPI.swift in Sources */,
 				A8DF3AD1245364CD006D3814 /* CalculationView.swift in Sources */,
 				A8DF3ACF245364CD006D3814 /* InflationCalculator.xcdatamodeld in Sources */,
+				A8ABA386247C1AD8005A4AB3 /* PriceSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
