@@ -49,9 +49,18 @@ struct PriceSheet: View {
         monthFormatter.dateFormat = "LLL"
         
         let startYear = yearFormatter.string(from: startDate)
-        let startMonth = monthFormatter.string(from: startDate).lowercased()
+        var startMonth = monthFormatter.string(from: startDate).lowercased()
         let endYear = yearFormatter.string(from: targetDate)
-        let endMonth = monthFormatter.string(from: targetDate).lowercased()
+        var endMonth = monthFormatter.string(from: targetDate).lowercased()
+        
+        //check to keep months updated to most recent month (mar as of 5/25/20
+        if (endYear == "2020") {
+            endMonth = checkMonth(month: endMonth)
+        }
+        
+        if (startYear == "2020") {
+            startMonth = checkMonth(month: startMonth)
+        }
         
         
         let startCPI = inflationData[startYear]?[startMonth]
@@ -75,6 +84,13 @@ struct PriceSheet: View {
     
 }
 
+func checkMonth(month: String) -> String {
+    if(month == "jan" || month == "feb" || month == "mar") {
+        return month
+    } else {
+        return "mar"
+    }
+}
 
 
 struct PriceSheet_Previews: PreviewProvider {
